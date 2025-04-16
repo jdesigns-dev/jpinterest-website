@@ -1,0 +1,422 @@
+ *{
+ 	margin:0;
+ 	padding:0;
+ 	box-sizing: border-box;
+ }
+ body {
+ 	font-family: 'segoe Ul',Tahoma,Geneva,Verdana,sans-serif;
+ 	color: white;
+ 	background-color: #000;
+ }
+ .hero{
+ 	height: 100vh;
+ 	background: url(jj.jpg); no-repeat center/cover;
+ 	position: relative;
+ 	display: flex;
+ 	align-items: center;
+ 	text-align: center;
+ }
+ .overlay{
+ 	background-color: rgba(0,0,0,0.6);
+ 	padding: 2rem;
+ 	border-radius: 10px;
+ }
+ h1 {
+ 	font-size: 2.5rem;
+ }
+ p{
+ 	font-size: 1.2rem;
+ 	margin-top: 0.5rem;
+ }
+ @media(max-width: 768px){
+ 	h1{
+ 		font-size: 2rem;
+ }
+ p{
+ 	font-size: 1rem
+ }
+}
+.about{
+	background-color: #111;
+	padding: 4rem 2rem;
+	text-align: center;
+}
+.about.container{
+	max-width: 800px;
+	margin: 0 auto;
+}
+.about h2{
+	font-size: 2rem;
+	margin-bottom: 1rem;
+	color: #ffcc00;
+}
+.about p{
+	font-size: 1.1rem;
+	line-height: 1.6;
+	color: #ddd;
+}
+@media(max-width: 768px){
+	.about h2{
+		font-size: 1.6rem;
+	}
+	.about p{
+		font-size: 1rem;
+	}
+}
+.gallery{
+	background-color: #000;
+	padding: 4rem 2rem;
+	text-align: center;
+}
+.gallery h2{
+	font-size: 2rem;
+	margin-bottom: 2rem;
+	color: #ffcc00;
+}
+.photo-grid{
+	display: grid;
+	grid-template-columns: repeat(auto fit,minmax(250px,1fr));
+	gap:1rem;
+}
+.photo-grid img{
+	width:100%;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 8px;
+	transition: transform 0.38 case;
+}
+.photo-grid img:hover{
+	transform: scale(1.05);
+}
+.services{
+	background-color: #111;
+	padding: 4rem 2rem;
+	text-align: center;
+}
+.services h2{
+	font-size: 2rem;
+	margin-bottom: 2rem;
+	color: #ffcc00;
+}
+.service-cards{
+	display: flex;
+	flex-wrap: wrap;
+	gap:1.5rem;
+	justify-content: center;
+}
+.card h3{
+	color: #ffcc00;
+	margin-bottom: 1rem;
+}
+.card:hover{
+	transform: translate(-5px);
+}
+@media(max-width:768px){
+	.service-cards{
+		flex-direction: column;
+		align-items: center;
+	}
+}
+.contact{
+	background-color: #000;
+	padding: 4rem 2rem;
+	text-align: center;
+}
+.contact h2{
+	font-size: 2rem;
+	color: #ffcc00;
+}
+.contact a{
+	color: #ffcc00;
+	text text-decoration: none;
+}
+.contact a:hover{
+	text-decoration: underline;
+}
+.navbar{
+	background-color: #000;
+	padding: 1rem 2rem;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	border-bottom: 1px solid #222;
+}
+.nav-container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px;
+	margin: auto;
+}
+.logo{
+	color: #ffcc00
+	font-size:1.5rem;
+}
+.nav-links{
+	list-style: none;
+	display: flex;
+	gap:1.5rem;
+}
+.nav-links a{
+	color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.38 ease;
+}
+.nav-links a:hover{
+	color: #ffcc00;
+}
+@media(max-width: 768px){
+	nav-links{
+		flex-direction: column;
+		background-color: #111;
+		position:absolute;
+		top:60px;
+		right: 0;
+		width: 200px;
+		display: none;
+	}
+
+	.nav-container.active.nav-links{
+		display: flex;
+	}
+	.navbar.menu-toggle{
+		display: block;
+		curser:pointer;
+		color: #111;
+		font-size: 1.5rem;
+	}
+}
+.menu-toggle{
+	display:none;
+	flex-direction: column;
+	gap:5px;
+	cursor: pointer;
+}
+.bar{
+	width: 25px;
+	height: 3px;
+	background-color: #fff;
+	border-radius: 5px;
+}
+@media(max-width: 768px){
+	.menu-togggle{
+		display: flex;
+	}
+	.nav-links{
+		display: none;
+		flex-direction: column;
+		background-color: #111;
+		position: absolute;
+		top: 60px;
+		right:0;
+		width: 200px;
+	}
+	.nav-container.active.nav-links{
+		display: flex;
+	}
+}
+.footer{
+	background-color: #111;
+	color: #aaa;
+	text-align: center;
+	padding: 2rem 1rem;
+	font-size: 0.9rem;
+	border-top: 1px solid #222;
+}
+.footer a{
+	color: #ffcc00;
+	text-decoration: none;
+}
+.footer a:hover{
+	text-decoration: underline;
+}
+
+<div class="container">
+					<h2>Our Gallery</h2>
+					<div class="photo grid">
+						 <img src="display image.jpg"alt="Gallery photo 1">
+						 <img src="work image.jpg"alt="Gallery photo 2">
+						 <img src="hobie image.JPG"alt="Gallery photo 3">
+				   </div>
+				</div>
+			</section>
+<!-- Navbar -->
+	<nav class="Navbar">
+		<div class="nav-container">
+			<h1 class="logo">J Pinterest</h1>
+			<ul class="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="service.html">Service</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+	</nav>	
+		<!-- About Section -->
+		<section class="about">
+		<div>
+			<h2>About Us</h2>
+			<p>We are a creative photo studio focused on capturing beautiful moments...
+					<h2>About Us</h2>
+				<p>
+					At J pinterest Photo Studio, we speacilize on capturing the beauty of life through the lens. whether its a candid moment,a speacial event, or a creative portrait session. we're passionate about delivering timeless images you'll cherish forever. 
+					   welcome to the J PINTEREST PHOTO STUDIO.. 
+				</p>
+
+			</p>
+		</div>
+		</section>
+
+		<!--Footer -->
+		<footer class="Footer">
+			<div class="container">
+				<p>&copy;2025 J Pinterest Photo Studio. All rights reserved.</p>
+			</div>
+		</footer>
+</body>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport"content="width=device=width.initial-scale=1.0" />
+	<title>About- J pinterest Photo Studio</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+	
+
+	<!-- Navbar -->
+	<nav class="Navbar">
+		<div class="nav-container">
+			<h1 class="logo">J Pinterest</h1>
+			<ul class="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="service.html">Service</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+	</nav>	
+		<!-- Gallery Section -->
+		<section class="Gallery">
+		 <div class="container">
+					<h2>Our Gallery</h2>
+					<div class="photo grid">
+						 <img src="display image.jpg"alt="Gallery photo 1">
+						 <img src="work image.jpg"alt="Gallery photo 2">
+						 <img src="hobie image.JPG"alt="Gallery photo 3">
+				   </div>
+				</div>
+		</section>
+
+		<!--Footer -->
+		<footer class="Footer">
+			<div class="container">
+				<p>&copy;2025 J Pinterest Photo Studio. All rights reserved.</p>
+			</div>
+		</footer>
+</body>
+ 						<div class="service-cards">
+							<div class="card">
+							<h3>Event photography</h3>
+							<p>We capture birthdays, weddings, and corporate events with a creative touch. </p>
+						</div>	
+				   <div class="card">
+				   	<h3>portrait sessions</h3>
+				   	<p>Book studio or outdoor sessions for stunning portraits and proffessional headshots. </p>
+				   </div>
+				   <div class="card">
+				   	<h3>photo editing</h3>
+				   	<p>high-end retouching and editing to bring out the best in every image</p>
+				   </div>
+				 </div>
+				</div>
+			</section>
+			 <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport"content="width=device=width.initial-scale=1.0" />
+	<title>Contact- J pinterest Photo Studio</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+	
+
+	<!-- Navbar -->
+	<nav class="Navbar">
+		<div class="nav-container">
+			<h1 class="logo">J Pinterest</h1>
+			<ul class="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="services.html">Services</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+	</nav>	
+		<!-- Contact Section -->
+		<section class="about">
+ 							<div class="container">
+							<h2>contact Us</h2>
+							<p>Have a project in mind? Let's connect!</p>
+							<div class="contact-info">
+								<p>Email:<a href="mailto:johnrotich795@gmail.com">johnrotich795@gmail.com  </a></p>
+								<p>phone:<a href="tel:+254714297602">+254 7 14 297 602</a></p>
+								<p>instagram:<a href="https://johnrotich795.com/yourstudio"target="blank">@johnrotich</a></p>
+						</div>
+					</div>
+			</section>
+
+		<!--Footer -->
+		<footer class="Footer">
+			<div class="container">
+				<p>&copy;2025 J Pinterest Photo Studio. All rights reserved.</p>
+			</div>
+		</footer>
+</body>
+	<script>
+		const menuToggle=document.queryselector('menu-toggle');
+		const navlinks=document.queryselector('nav-links');
+		menuToggle.addEventlistener('click'.0=>{
+			navlinks.classlist.toggle('active');
+			D;
+	</script>
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport"content="width=device=width.initial-scale=1.0" />
+	<title>Home- J pinterest Photo Studio</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+	
+
+	<!-- Navbar -->
+	<nav class="Navbar">
+		<div class="nav-container">
+			<h1 class="logo">J Pinterest</h1>
+			<ul class="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="servicess.html">Services</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+	</nav>	
+		<!-- Home Section -->
+		<!--Footer -->
+		<footer class="Footer">
+			<div class="container">
+				<p>&copy;2025 J Pinterest Photo Studio. All rights reserved.</p>
+			</div>
+		</footer>
+</body>
+</html>
+</html>
